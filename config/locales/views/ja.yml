@@ -1,0 +1,26 @@
+ja:
+  articles:
+    index:
+      Show: '詳細'
+      Back: '一覧'
+      Destroy: '削除'
+      New Article: '記事作成'
+      Articles: '記事'
+      Title: 'タイトル'
+      Content: '内容'
+      Edit: '編集'
+    edit:
+      Title: '記事編集'
+      Show: '詳細'
+      Back: '一覧'
+    new:
+      Back: '一覧'
+      New Article: '記事作成'
+    show:
+      Edit: '編集'
+      Back: '一覧'
+      Title: 'タイトル:'
+      Content: '内容:'
+    _form:
+      title: 'タイトル'
+      content: '内容'

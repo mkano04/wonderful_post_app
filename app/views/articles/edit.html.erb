@@ -1,0 +1,6 @@
+<h1><%= t '.Title' %> </h1>
+
+ <%= render 'form', article: @article %>
+
+<%= link_to (t '.Show'), @article %> |
+<%= link_to (t '.Back'), articles_path %>
