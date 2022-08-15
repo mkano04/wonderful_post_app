@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t '.Articles' %></h1>
+
+<%= link_to (t '.New Article'), new_article_path, class: "btn btn-info" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><%= t '.Title' %></th>
+      <th scope="col"><%= t '.Content' %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.content %></td>
+        <td><%= link_to (t '.Show'), article, class: "btn btn-success" %></td>
+        <td><%= link_to (t '.Edit'), edit_article_path(article) , class: "btn btn-warning" %></td>
+        <td><%= link_to (t '.Destroy'), article, class: "btn btn-danger", method: :delete, data: { confirm: "削除しますか?" }%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

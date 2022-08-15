@@ -7,9 +7,18 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%
+=begin%>
+ <p class="notice"><%= (t'notice.successful login') %></p>
+      <p class="alert"><%= (t'notice.Login failed') %></p>
+<%
+=end%>
+      <%= yield %>
+    </div>
   </body>
 </html>

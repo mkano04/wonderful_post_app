@@ -12,6 +12,9 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  # default url of device
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
@@ -27,6 +30,17 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :user_name => Rails.application.credentials.google[:mail],
+    :password => Rails.application.credentials.google[:password],
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local

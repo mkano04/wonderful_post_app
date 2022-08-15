@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      article: '記事'
+    attributes:
+      article:
+        title: 'タイトル'
+        content: '内容'
+  notice:
+    create: '記事の作成に成功しました！'
+    update: '記事の編集に成功しました！'
+    destroy: '記事の削除に成功しました！'
+    successful login: 'ログインしました。'
+    Login failed: 'ログインできませんでした。'
